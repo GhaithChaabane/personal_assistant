@@ -49,6 +49,8 @@ class gemini_audio:
         self.running = True
         self.cleanup_event = cleanup_event
         self.allow_interruptions = False
+        # When True the model is currently sending audio; used to pause sending mic chunks
+        self.is_model_speaking = False
 
 
 
@@ -79,6 +81,11 @@ class gemini_audio:
                             ]
                         }
                     }
+                    # If the model is speaking and we don't allow interruptions,
+                    # skip sending microphone chunks to avoid overlap/crackle.
+                    if self.is_model_speaking and not self.allow_interruptions:
+                        await asyncio.sleep(0.01)
+                        continue
                     await self.audio_queue.put(realtime_input_msg)
                 except OSError as e:
                     print(f"Audio capture error: {e}")
@@ -110,7 +117,8 @@ class gemini_audio:
                     parts = response["serverContent"]["modelTurn"]["parts"]
                     for p in parts:
                         if "inlineData" in p:
-                            # This indicates audio data
+                            # This indicates audio data — model is speaking
+                            self.is_model_speaking = True
                             audio_data_b64 = p["inlineData"]["data"]
                             audio_bytes = base64.b64decode(audio_data_b64)
                             self.audio_output.put_nowait(audio_bytes)
@@ -124,6 +132,8 @@ class gemini_audio:
                 try:
                     turn_complete = response["serverContent"]["turnComplete"]
                     if turn_complete:
+                        # Model finished speaking — clear speaking flag
+                        self.is_model_speaking = False
                         # If the user interrupts or the turn is done, any leftover audio is ignored or cleared.
                         while not self.audio_queue.empty():
                             self.audio_queue.get_nowait()
