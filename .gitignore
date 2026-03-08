@@ -8,8 +8,11 @@ wheels/
 
 # Virtual environments
 .venv
-.env
 # dir
 llama.cpp
 models
 
+# dotenv
+.env
+# macOS folder metadata
+.DS_Store
