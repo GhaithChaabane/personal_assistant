@@ -1,0 +1,179 @@
+2026-02-21 17:38:41,634 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-02-21 17:38:42,002 - INFO -  WebSocket connection established.
+2026-02-21 17:38:42,002 - INFO -  Sending setup message.
+2026-02-21 17:38:42,003 - INFO -  Waiting for setup response.
+2026-02-21 23:31:55,975 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-02-21 23:31:56,378 - INFO -  WebSocket connection established.
+2026-02-21 23:31:56,378 - INFO -  Sending setup message.
+2026-02-21 23:31:56,378 - INFO -  Waiting for setup response.
+2026-02-21 23:36:56,908 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-02-21 23:36:57,422 - INFO -  WebSocket connection established.
+2026-02-21 23:36:57,422 - INFO -  Sending setup message.
+2026-02-21 23:36:57,423 - INFO -  Waiting for setup response.
+2026-02-21 23:38:18,087 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-02-21 23:38:18,537 - INFO -  WebSocket connection established.
+2026-02-21 23:38:18,537 - INFO -  Sending setup message.
+2026-02-21 23:38:18,537 - INFO -  Waiting for setup response.
+2026-03-07 12:51:50,197 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-07 12:51:51,487 - INFO -  WebSocket connection established.
+2026-03-07 12:51:51,488 - INFO -  Sending setup message.
+2026-03-07 12:51:51,488 - INFO -  Waiting for setup response.
+2026-03-07 12:56:09,011 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-07 12:56:09,620 - INFO -  WebSocket connection established.
+2026-03-07 12:56:09,620 - INFO -  Sending setup message.
+2026-03-07 12:56:09,620 - INFO -  Waiting for setup response.
+2026-03-07 12:56:09,721 - ERROR - Error in Gemini connection
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 223, in main
+  |     asyncio.TaskGroup() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 71, in __aexit__
+  |     return await self._aexit(et, exc)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 164, in _aexit
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 253, in main
+    |     setup_resp = json.loads(await self.ws.recv())
+    |                                   ^^^^^^^^^^^^
+    | AttributeError: 'AsyncSession' object has no attribute 'recv'
+    +------------------------------------
+2026-03-07 23:32:29,938 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-07 23:32:30,608 - INFO -  WebSocket connection established.
+2026-03-07 23:32:30,609 - INFO -  Sending setup message.
+2026-03-07 23:32:30,609 - INFO -  Waiting for setup response.
+2026-03-07 23:41:16,207 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-07 23:41:16,734 - INFO -  WebSocket connection established.
+2026-03-07 23:41:16,734 - INFO -  Sending setup message.
+2026-03-07 23:41:16,734 - INFO -  Waiting for setup response.
+2026-03-08 11:32:48,162 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 11:32:48,815 - INFO -  WebSocket connection established.
+2026-03-08 11:32:48,817 - INFO -  Sending setup message.
+2026-03-08 11:32:48,817 - INFO -  Waiting for setup response.
+2026-03-08 11:55:10,561 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 11:55:11,773 - INFO -  WebSocket connection established.
+2026-03-08 11:55:11,773 - INFO -  Sending setup message.
+2026-03-08 11:55:11,774 - INFO -  Waiting for setup response.
+2026-03-08 11:55:12,314 - ERROR - Error in Gemini connection
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 199, in main
+  |     asyncio.TaskGroup() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 71, in __aexit__
+  |     return await self._aexit(et, exc)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 164, in _aexit
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 129, in send_data
+    |     await self.ws.send_realtime_input(audio=data)
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/.venv/lib/python3.12/site-packages/google/genai/live.py", line 323, in send_realtime_input
+    |     realtime_input = types.LiveSendRealtimeInputParameters.model_validate(
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/.venv/lib/python3.12/site-packages/pydantic/main.py", line 716, in model_validate
+    |     return cls.__pydantic_validator__.validate_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pydantic_core._pydantic_core.ValidationError: 1 validation error for LiveSendRealtimeInputParameters
+    | audio.realtime_input
+    |   Extra inputs are not permitted [type=extra_forbidden, input_value={'media_chunks': [{'data'...audio/pcm;rate=16000'}]}, input_type=dict]
+    |     For further information visit https://errors.pydantic.dev/2.12/v/extra_forbidden
+    +------------------------------------
+2026-03-08 12:18:28,676 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 12:18:29,326 - INFO -  WebSocket connection established.
+2026-03-08 12:18:29,326 - INFO -  Sending setup message.
+2026-03-08 12:18:29,326 - INFO -  Waiting for setup response.
+2026-03-08 12:19:35,103 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 12:19:35,545 - INFO -  WebSocket connection established.
+2026-03-08 12:19:35,545 - INFO -  Sending setup message.
+2026-03-08 12:19:35,545 - INFO -  Waiting for setup response.
+2026-03-08 12:19:36,043 - ERROR - Error in Gemini connection
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 225, in main
+  |     asyncio.TaskGroup() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 71, in __aexit__
+  |     return await self._aexit(et, exc)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 164, in _aexit
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 133, in send_data
+    |     await self.ws.send_realtime_input(audio=data)
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/.venv/lib/python3.12/site-packages/google/genai/live.py", line 323, in send_realtime_input
+    |     realtime_input = types.LiveSendRealtimeInputParameters.model_validate(
+    |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/.venv/lib/python3.12/site-packages/pydantic/main.py", line 716, in model_validate
+    |     return cls.__pydantic_validator__.validate_python(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    | pydantic_core._pydantic_core.ValidationError: 1 validation error for LiveSendRealtimeInputParameters
+    | audio.realtime_input
+    |   Extra inputs are not permitted [type=extra_forbidden, input_value={'media_chunks': [{'data'...audio/pcm;rate=16000'}]}, input_type=dict]
+    |     For further information visit https://errors.pydantic.dev/2.12/v/extra_forbidden
+    +------------------------------------
+2026-03-08 12:21:03,714 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 12:21:04,212 - INFO -  WebSocket connection established.
+2026-03-08 12:21:04,213 - INFO -  Sending setup message.
+2026-03-08 12:21:04,213 - INFO -  Waiting for setup response.
+2026-03-08 12:24:16,920 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 12:24:17,459 - INFO -  WebSocket connection established.
+2026-03-08 12:24:17,459 - INFO -  Sending setup message.
+2026-03-08 12:24:17,459 - INFO -  Waiting for setup response.
+2026-03-08 12:24:34,346 - WARNING - Warning: there are non-data parts in the response: ['text', 'thought'], returning concatenated data result from data parts, check out the non data parts for full response from model.
+2026-03-08 12:24:35,054 - WARNING - Warning: there are non-text parts in the response: ['inline_data'], returning concatenated text result from text parts, check out the non text parts for full response from model.
+2026-03-08 12:24:58,228 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 12:24:58,960 - INFO -  WebSocket connection established.
+2026-03-08 12:24:58,960 - INFO -  Sending setup message.
+2026-03-08 12:24:58,960 - INFO -  Waiting for setup response.
+2026-03-08 12:25:01,588 - WARNING - Warning: there are non-data parts in the response: ['text', 'thought'], returning concatenated data result from data parts, check out the non data parts for full response from model.
+2026-03-08 12:25:05,537 - ERROR - Error in Gemini connection
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 225, in main
+  |     asyncio.TaskGroup() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 71, in __aexit__
+  |     return await self._aexit(et, exc)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 164, in _aexit
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 183, in receive_server_messages
+    |     while not self.audio_in_queue.empty():
+    |               ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'gemini_audio' object has no attribute 'audio_in_queue'. Did you mean: 'audio_queue'?
+    +------------------------------------
+2026-03-08 12:26:19,311 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 12:26:19,763 - INFO -  WebSocket connection established.
+2026-03-08 12:26:19,764 - INFO -  Sending setup message.
+2026-03-08 12:26:19,764 - INFO -  Waiting for setup response.
+2026-03-08 12:26:23,190 - WARNING - Warning: there are non-data parts in the response: ['text', 'thought'], returning concatenated data result from data parts, check out the non data parts for full response from model.
+2026-03-08 12:26:26,186 - ERROR - Error in Gemini connection
+  + Exception Group Traceback (most recent call last):
+  |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 225, in main
+  |     asyncio.TaskGroup() as tg,
+  |     ^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 71, in __aexit__
+  |     return await self._aexit(et, exc)
+  |            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |   File "/Users/ghaith/.local/share/uv/python/cpython-3.12.9-macos-aarch64-none/lib/python3.12/asyncio/taskgroups.py", line 164, in _aexit
+  |     raise BaseExceptionGroup(
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "/Users/ghaith/Documents/projects/personal_assistant/src/gemini_app.py", line 183, in receive_server_messages
+    |     while not self.audio_in_queue.empty():
+    |               ^^^^^^^^^^^^^^^^^^^
+    | AttributeError: 'gemini_audio' object has no attribute 'audio_in_queue'. Did you mean: 'audio_queue'?
+    +------------------------------------
+2026-03-08 12:27:52,459 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-08 12:27:52,938 - INFO -  WebSocket connection established.
+2026-03-08 12:27:52,938 - INFO -  Sending setup message.
+2026-03-08 12:27:52,938 - INFO -  Waiting for setup response.
+2026-03-08 12:27:56,605 - WARNING - Warning: there are non-data parts in the response: ['text', 'thought'], returning concatenated data result from data parts, check out the non data parts for full response from model.
