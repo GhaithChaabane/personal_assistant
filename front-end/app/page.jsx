@@ -10,55 +10,6 @@ export default function Page() {
   const [password, setPassword] = useState('')
   return <ModelPlayground />
 }
-//   return (
-//     <div className="container">
-//       <Card className="card">
-//         <CardHeader className="card_header">
-//           <CardTitle className="card_title">
-//             Awaken Ambience ✨
-//           </CardTitle>
-//           <CardDescription className="card_description">
-//             Enter your credentials to access the application
-//           </CardDescription>
-//         </CardHeader>
-//         <CardContent className="card_content">
-//           <form >
-//             <div className="container">
-//               <div className="form_fields">
-//                 <LabelPrimitive.Root htmlFor="username">Username</LabelPrimitive.Root>
-//                 <input
-//                   id="username"
-//                   type="text"
-//                   // value={username}
-//                   onChange={(e) => setUsername(e.target.value)}
-//                   required
-//                   autoComplete="username"
-//                 />
-//               </div>
-//               <div className="form_fields">
-//                 <LabelPrimitive.Root htmlFor="password">Password</LabelPrimitive.Root>
-//                 <input
-//                   id="password"
-//                   type="password"
-//                   // value={password}
-//                   onChange={(e) => setPassword(e.target.value)}
-//                   required
-//                   autoComplete="current-password"
-//                 />
-//               </div>
-//               <Button type="submit" disabled={loading}>
-//                 {loading ? 'Signing in...' : 'Sign in'}
-//               </Button>
-//             </div>
-//           </form>
-//         </CardContent>
-//         <CardFooter className="card_footer">
-//           <p>Default credentials: admin/admin</p>
-//         </CardFooter>
-//       </Card>
-//     </div>
-//   )
-// }
 
 
 const Card = React.forwardRef(({ className, ...props }, ref) => (
