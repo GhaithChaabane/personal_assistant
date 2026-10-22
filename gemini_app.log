@@ -177,3 +177,18 @@
 2026-03-08 12:27:52,938 - INFO -  Sending setup message.
 2026-03-08 12:27:52,938 - INFO -  Waiting for setup response.
 2026-03-08 12:27:56,605 - WARNING - Warning: there are non-data parts in the response: ['text', 'thought'], returning concatenated data result from data parts, check out the non data parts for full response from model.
+2026-03-14 11:03:32,909 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-14 11:03:33,352 - INFO -  WebSocket connection established.
+2026-03-14 11:03:33,352 - INFO -  Sending setup message.
+2026-03-14 11:03:33,352 - INFO -  Waiting for setup response.
+2026-03-14 11:03:36,500 - WARNING - Warning: there are non-data parts in the response: ['text', 'thought'], returning concatenated data result from data parts, check out the non data parts for full response from model.
+2026-03-14 13:10:56,174 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-14 13:10:56,635 - INFO -  WebSocket connection established.
+2026-03-14 13:10:56,636 - INFO -  Sending setup message.
+2026-03-14 13:10:56,636 - INFO -  Waiting for setup response.
+2026-03-14 13:11:08,066 - WARNING - Warning: there are non-data parts in the response: ['text', 'thought'], returning concatenated data result from data parts, check out the non data parts for full response from model.
+2026-03-14 13:11:08,412 - WARNING - Warning: there are non-text parts in the response: ['code_execution_result'], returning concatenated text result from text parts, check out the non text parts for full response from model.
+2026-03-14 14:46:06,474 - INFO - Attempting to connect to Gemini at {self.WS_URI}
+2026-03-14 14:46:07,405 - INFO -  WebSocket connection established.
+2026-03-14 14:46:07,405 - INFO -  Sending setup message.
+2026-03-14 14:46:07,406 - INFO -  Waiting for setup response.

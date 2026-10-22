@@ -12,7 +12,7 @@ from concurrent.futures import CancelledError
 import logging
 import os
 from dotenv import load_dotenv
-from google.genai.types import (GoogleSearch,Tool, GenerateContentConfig)
+from google.genai.types import GoogleSearch,Tool , Content, Part
 import traceback
 
 
@@ -34,10 +34,15 @@ CONFIG = genai.types.LiveConnectConfig(
         voice_config=genai.types.VoiceConfig(
             prebuilt_voice_config=genai.types.PrebuiltVoiceConfig(voice_name = "Zephyr")
         )
+    ),
+    tools=[google_search_tool],
+    system_instruction=Content(
+         parts=[Part.from_text(text="""You are a helpful assistant.""")],
+         role="user",
     )
 )
-
-
+# todo add logging and thinking 
+# todo start frontend
 
 class gemini_audio:
     """
@@ -210,7 +215,7 @@ class gemini_audio:
             print("Error in Gemini connection: ", end="")
             # Print the full exception (including ExceptionGroup sub-exceptions)
             traceback.print_exception(type(e), e, e.__traceback__, chain=True)
-
+#TODO add google search tool
 if __name__ == "__main__":
 
     gemini=gemini_audio()
